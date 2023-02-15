@@ -2,7 +2,7 @@ import React,{useContext, useState,useEffect} from 'react'
 import {Context} from "../context/ContextAPI"
 import BasketItemsCard from './BasketItemsCard';
 import Footer from './Footer';
-// import Confetti from "react-confetti";
+import Confetti from "react-confetti";
 
 const Cart = () => {
     const {basket,login,setBasket} = useContext(Context);
@@ -36,7 +36,7 @@ const Cart = () => {
   return (
     <>
     <div className='grid grid-cols-1 lg:grid-cols-3 group mt-[3rem] mb-[3rem] font-serif'>
-        {/* {orderPlaced && <Confetti/>} */}
+        {orderPlaced && <Confetti/>}
         {orderPlaced && <div className='container xl:ml-[9rem] col-span-2'>
             <h1 className='text-3xl xl:px-4 py-2 '>Order Placed</h1>
             </div>}
